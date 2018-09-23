@@ -2,15 +2,14 @@ package com.Snake.com.Snake.entities;
 
 import java.awt.*;
 
-public class BodyPart {
+public class Apple {
     private int xCoor, yCoor, width, height;
 
-    public BodyPart(int xCoor,int yCoor,int tileSize){
+    public Apple(int xCoor, int yCoor, int tileSize){
         this.xCoor = xCoor;
         this.yCoor = yCoor;
-        this.width = tileSize;
-        this.height = tileSize;
-
+        width = tileSize;
+        height = tileSize;
     }
 
     public void tick(){
@@ -18,10 +17,8 @@ public class BodyPart {
     }
 
     public void draw(Graphics g){
-        g.setColor(Color.BLACK);
-        g.fillRect(xCoor * width,yCoor *height, width, height);
-        g.setColor(Color.GREEN);
-        g.fillRect(xCoor * width+2,yCoor *height+2, width-4, height-4);
+        g.setColor(Color.red);
+        g.fillRect(xCoor*width,yCoor*height,width,height);
     }
 
     public int getxCoor() {
@@ -39,4 +36,5 @@ public class BodyPart {
     public void setyCoor(int yCoor) {
         this.yCoor = yCoor;
     }
+
 }
